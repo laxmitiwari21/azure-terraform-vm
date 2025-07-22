@@ -35,3 +35,45 @@ This project demonstrates how to provision a **Linux Virtual Machine on Microsof
 ```bash
 git clone https://github.com/laxmitiwari21/azure-terraform-vm.git
 cd azure-terraform-vm
+```
+### 2. Configure Azure
+
+Login to your Azure account:
+```bash
+az login
+```
+
+### 3. Initialize Terraform
+```bash
+terraform init
+```
+
+### 4. Preview Changes
+```bash
+terraform plan
+```
+
+### 5. Apply Configuration
+```bash
+terraform apply
+```
+Enter the admin password when prompted (from terraform.tfvars or input).
+
+## 🔓 Access the VM
+After terraform apply, note the public IP output.
+```bash
+ssh azureuser@<public_ip>
+```
+## 📌 Clean Up
+To avoid charges:
+```bash
+terraform destroy
+```
+## 💼 Why This Project?
+- ✅ Beginner-friendly
+- ✅ Follows Azure best practices
+- ✅ Infrastructure-as-Code (IaC) skills
+- ✅ Perfect for resume, GitHub portfolio, and interviews
+## 📜 License
+MIT License
+Made with 💻 by Laxmi Tiwari
